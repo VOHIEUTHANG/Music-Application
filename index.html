@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Application</title>
+    <link rel="icon" href="./assets/Images/Logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/CSS/loader.css" />
+    <link rel="stylesheet" href="./assets/CSS/main.css" />
+    <link rel="stylesheet" href="./assets/CSS/responsive_pc.css" />
+    <link rel="stylesheet" href="./assets/CSS/particles.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Style+Script&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <div id="particles-js"></div>
+      <!-- Loader -->
+      <div class="loaderContainer">
+        <div class="lds-dual-ring"></div>
+      </div>
+      <!-- Background-slide -->
+      <div class="background-container">
+        <div class="br-prevBtn">
+          <i class="fas fa-angle-left"></i>
+        </div>
+
+        <div class="br-nextBtn">
+          <i class="fas fa-angle-right"></i>
+        </div>
+
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/city_evening_sunset_sky_uplands_119886_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/lane_night_dark_139408_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/city_sunset_evening_163123_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/city_sunset_evening_164329_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_city_lights_overview_129026_2560x1440.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_sunset_buildings_123999_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/single/road_sunset_horizon_marking_118582_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/sunset_trees_sky_clouds_horizon_119335_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/trolley_stop_city_evening_lighting_119292_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_aerial_view_city_lights_129810_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_city_lights_traffic_137961_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/single/new_york_usa_night_night_city_road_buildings_118403_3840x2160.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/single/new_york_usa_skyscrapers_night_115839_3840x2160.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/hong_kong_china_skyscrapers_night_city_city_lights_119347_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_street_skyscrapers_133350_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/city_aerial_view_buildings_201239_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+        <div class="background-slide fade">
+          <img
+            src="https://images.wallpaperscraft.com/image/night_city_sunset_evening_160422_1920x1080.jpg"
+            alt=""
+            class="background"
+          />
+        </div>
+      </div>
+      <!-- Dashboard -->
+      <div class="dashboard">
+        <!-- Header -->
+        <header>
+          <div class="titleSong">
+            <h4>Now playing</h4>
+            <h2>String 57th & 9th</h2>
+          </div>
+          <div class="VolumeControl">
+            <i class="fas fa-volume-up volume"></i>
+            <div class="volume-wrapper">
+              <input
+                type="range"
+                id="progress-v"
+                value="0"
+                step="1"
+                min="0"
+                max="100"
+              />
+            </div>
+          </div>
+          <div class="chill-mode">
+            <i class="fas fa-toggle-off icon-off"></i>
+            <i class="fas fa-toggle-on icon-on"></i>
+          </div>
+        </header>
+
+        <!-- CD -->
+
+        <div class="lightBackground">
+          <div class="cd">
+            <div
+              class="cd-thumb"
+              style="
+                background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+              "
+            ></div>
+          </div>
+        </div>
+
+        <!-- Control -->
+        <div class="control">
+          <div class="btn btn-repeat">
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="btn btn-toggle-play">
+            <i class="fas fa-pause icon-pause"></i>
+            <i class="fas fa-play icon-play"></i>
+          </div>
+          <div class="btn btn-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+          <div class="btn btn-random">
+            <i class="fas fa-random"></i>
+          </div>
+        </div>
+
+        <input
+          id="progress"
+          class="progress"
+          type="range"
+          value="0"
+          step="1"
+          min="0"
+          max="1000"
+        />
+
+        <audio id="audio" src=""></audio>
+      </div>
+
+      <!-- Playlist -->
+      <div class="playlist">
+        <div class="song">
+          <div
+            class="thumb"
+            style="
+              background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+            "
+          ></div>
+          <div class="body">
+            <h3 class="title">Music name</h3>
+            <p class="author">Singer</p>
+          </div>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div class="song">
+          <div
+            class="thumb"
+            style="
+              background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+            "
+          ></div>
+          <div class="body">
+            <h3 class="title">Music name</h3>
+            <p class="author">Singer</p>
+          </div>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div class="song">
+          <div
+            class="thumb"
+            style="
+              background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+            "
+          ></div>
+          <div class="body">
+            <h3 class="title">Music name</h3>
+            <p class="author">Singer</p>
+          </div>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./assets/Script/loaded.js"></script>
+    <script type="text/javascript" src="./assets/Script/main.js"></script>
+    <script type="text/javascript" src="./assets/Script/br-slide.js"></script>
+    <script src="./assets/Script/Particles/particles.min.js"></script>
+    <script src="./assets/Script/Particles/app.js"></script>
+  </body>
+</html>
