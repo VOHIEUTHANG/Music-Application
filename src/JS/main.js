@@ -13,11 +13,10 @@ const repeatBtn = $(".btn-repeat");
 const playlistNode = $(".playlist");
 const chillBtn = $(".chill-mode");
 const notificationNode = $(".chill-mode");
-const progressVolume = $('#progress-v');
-const volumeBtn = $('.VolumeControl');
-const volumeWrapper = $('.volume-wrapper');
+const progressVolume = $("#progress-v");
+const volumeBtn = $(".VolumeControl");
+const volumeWrapper = $(".volume-wrapper");
 
-//Local storages
 const PLAYER_STORAGE_KEY = "F8-player";
 // localStorage.setItem('key','value');
 
@@ -34,9 +33,8 @@ const app = (function () {
     isRepeat: false,
     isNoti: false,
     isChillMode: false,
-    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
+    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) ?? {},
     songs: [
-
       {
         name: "Closer",
         singer: "Halsey",
@@ -101,10 +99,10 @@ const app = (function () {
         name: "Lofi Acoustic Chill - 1 hour",
         singer: "Musikrimix",
         path: "./assets/Musics/Lofi Acoustic Chill - 1 hour.mp3",
-        image: "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/137175247/original/4b1b99a52886c658825c5cc89153e5fc8fe5b8a1.jpg",
+        image:
+          "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/137175247/original/4b1b99a52886c658825c5cc89153e5fc8fe5b8a1.jpg",
         hot: true,
       },
-
     ],
     chillSong: [
       {
@@ -119,8 +117,7 @@ const app = (function () {
         name: "Người Lạ Thoáng Qua",
         singer: "Đinh Tùng Huy x Vux",
         path: "./assets/Musics/ChillMusic/NguoiLaThoangQua.mp3",
-        image:
-          "https://i.ytimg.com/vi/s-eNhNIwwIs/maxresdefault.jpg",
+        image: "https://i.ytimg.com/vi/s-eNhNIwwIs/maxresdefault.jpg",
         new: true,
       },
       {
@@ -136,14 +133,12 @@ const app = (function () {
         path: "./assets/Musics/ChillMusic/TheLuong.mp3",
         image:
           "https://chuyenvui.com/wp-content/uploads/2021/06/loi-bai-hat-the-luong-2.jpg",
-
       },
       {
         name: "Sài Gòn Nay Mưa",
         singer: "JSOL ft. Hoàng Duyên",
         path: "./assets/Musics/ChillMusic/SaiGonNayMua.mp3",
-        image:
-          "https://i.ytimg.com/vi/WbVbcOYJFJk/mqdefault.jpg",
+        image: "https://i.ytimg.com/vi/WbVbcOYJFJk/mqdefault.jpg",
       },
       {
         name: "Rồi Tới Luôn",
@@ -157,21 +152,24 @@ const app = (function () {
         name: "Họa Mây",
         singer: "X2X",
         path: "./assets/Musics/ChillMusic/HoaMay.mp3",
-        image: "https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/b/0/4/0b047a80b0cbc0690afa34177f81b3f6.jpg",
+        image:
+          "https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/b/0/4/0b047a80b0cbc0690afa34177f81b3f6.jpg",
         hot: true,
       },
       {
         name: "Từ Chối Nhẹ Nhàng Thôi",
         singer: "Phúc Du x Bích Phương",
         path: "./assets/Musics/ChillMusic/TuChoiNheNhangThoi.mp3",
-        image: "https://billboardvn.vn/wp-content/uploads/2020/06/Voting-2MV.jpg",
+        image:
+          "https://billboardvn.vn/wp-content/uploads/2020/06/Voting-2MV.jpg",
         hot: true,
       },
       {
         name: "Thật Là Đáng Buồn",
         singer: "Doãn Hiếu x Phạm Nguyên Ngọc",
         path: "./assets/Musics/ChillMusic/ThatLaDangBuon.mp3",
-        image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/1/9/9/6/1996507ca69734dd0bc8564e8a657800.jpg",
+        image:
+          "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/1/9/9/6/1996507ca69734dd0bc8564e8a657800.jpg",
       },
       {
         name: "yêu Là Cưới",
@@ -184,8 +182,7 @@ const app = (function () {
         name: "3107-3",
         singer: "W/n x Nâu x Duongg",
         path: "./assets/Musics/ChillMusic/3107-3.mp3",
-        image:
-          "https://data.chiasenhac.com/data/cover/145/144390.jpg",
+        image: "https://data.chiasenhac.com/data/cover/145/144390.jpg",
         new: true,
       },
       {
@@ -200,8 +197,7 @@ const app = (function () {
         name: "Ghé Qua",
         singer: "Dick x Tofu x PC",
         path: "./assets/Musics/ChillMusic/GheQua.mp3",
-        image:
-          "https://i.ytimg.com/vi/wNH2zUpr_k4/maxresdefault.jpg",
+        image: "https://i.ytimg.com/vi/wNH2zUpr_k4/maxresdefault.jpg",
       },
       {
         name: "Lỗi Tại Anh",
@@ -220,7 +216,8 @@ const app = (function () {
         name: "Cưới Thôi",
         singer: "Masiu x Masew",
         path: "./assets/Musics/ChillMusic/CuoiThoi.mp3",
-        image: "https://i1.sndcdn.com/artworks-WI5MsTNygIpswgJa-lABTlA-t500x500.jpg",
+        image:
+          "https://i1.sndcdn.com/artworks-WI5MsTNygIpswgJa-lABTlA-t500x500.jpg",
         new: true,
       },
       {
@@ -234,7 +231,8 @@ const app = (function () {
         name: "Thích Em Hơi Nhiều",
         singer: " Wren Evans x Freak D",
         path: "./assets/Musics/ChillMusic/ThichEmHoiNhieu.mp3",
-        image: "https://i.ytimg.com/vi/faSVTByG0LQ/maxresdefault.jpg?v=60de85cc",
+        image:
+          "https://i.ytimg.com/vi/faSVTByG0LQ/maxresdefault.jpg?v=60de85cc",
         new: true,
       },
 
@@ -248,13 +246,15 @@ const app = (function () {
         name: "Anh Thề Đấy",
         singer: "Thanh Hưng x Dino",
         path: "./assets/Musics/ChillMusic/AnhTheDay.mp3",
-        image: "https://avatar-ex-swe.nixcdn.com/song/2021/05/28/a/5/3/8/1622187655260_640.jpg",
+        image:
+          "https://avatar-ex-swe.nixcdn.com/song/2021/05/28/a/5/3/8/1622187655260_640.jpg",
       },
       {
         name: "Dù Cho Mai Về Sau",
         singer: "Bùi Trường Linh x FREAK D",
         path: "./assets/Musics/ChillMusic/DuChoMaiVeSau.mp3",
-        image: "https://i.scdn.co/image/ab67616d0000b273d08e312c1749467b13f34608",
+        image:
+          "https://i.scdn.co/image/ab67616d0000b273d08e312c1749467b13f34608",
         hot: true,
       },
 
@@ -269,8 +269,7 @@ const app = (function () {
         name: "Nàng Thơ",
         singer: "Hoàng Dũng x Freak D",
         path: "./assets/Musics/ChillMusic/NangTho.mp3",
-        image:
-          "https://i.ytimg.com/vi/Zzn9-ATB9aU/maxresdefault.jpg",
+        image: "https://i.ytimg.com/vi/Zzn9-ATB9aU/maxresdefault.jpg",
       },
       {
         name: "Chỉ Là Muốn Nói",
@@ -300,13 +299,6 @@ const app = (function () {
           "https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/6/8/4/e/684e70dd4cabcd49a65f076096c1f820.jpg",
       },
       {
-        name: "Hẹn Em Kiếp Sau",
-        singer: "Lã. x Duy Phúc x TiB",
-        path: "./assets/Musics/ChillMusic/HenEmKiepSau.mp3",
-        image:
-          "https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/c/a/5/c/ca5c05e1e0e068e8d505216ed0794a6e.jpg",
-      },
-      {
         name: "Hong Kong 1",
         singer: "Nguyễn Trọng Tài x San Ji x Double X",
         path: "./assets/Musics/ChillMusic/HongKongI.mp3",
@@ -323,27 +315,14 @@ const app = (function () {
         name: "Chuyện Rằng",
         singer: "Thịnh Suy x Freak D",
         path: "./assets/Musics/ChillMusic/Chuyen Rang.mp3",
-        image: "https://i.scdn.co/image/ab67616d0000b2734be34a1e036c97d22b5392d5",
-      },
-      {
-        name: "Nợ Ai Đó Lời Xin Lỗi",
-        singer: "Bozitt x Freak D",
-        path: "./assets/Musics/ChillMusic/No Ai Do Loi Xin Loi.mp3",
         image:
-          "https://i1.sndcdn.com/artworks-cgg23tTwEz2VnTMX-rxOrJA-t500x500.jpg",
+          "https://i.scdn.co/image/ab67616d0000b2734be34a1e036c97d22b5392d5",
       },
       {
         name: "Dại Khờ",
         singer: "NB3 Hoài Bảo x Freak D",
         path: "./assets/Musics/ChillMusic/Dại Khờ (Lofi Ver.) - NB3 Hoài Bảo x Freak D.mp3",
-        image: "https://i.ytimg.com/vi/bUNwFuMfEFs/maxresdefault.jpg"
-      },
-      {
-        name: "1402",
-        singer: "NHÂN x HIẾU (prod. by wavytrbl)",
-        path: "./assets/Musics/ChillMusic/1402.mp3",
-        image: "./assets/IMG/1402-final.png",
-        new: true,
+        image: "https://i.ytimg.com/vi/bUNwFuMfEFs/maxresdefault.jpg",
       },
       {
         name: "Thức Giấc",
@@ -378,12 +357,14 @@ const app = (function () {
         path: "./assets/Musics/ChillMusic/HomNayEmCuoiRoi.mp3",
         image: "https://i.ytimg.com/vi/NuWAl7-Vkwk/maxresdefault.jpg",
       },
-
     ],
     tempSong: [],
     setConfigure: function (key, value) {
       app.config[key] = value;
-      window.localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(app.config));
+      window.localStorage.setItem(
+        PLAYER_STORAGE_KEY,
+        JSON.stringify(app.config)
+      );
     },
     defineProperties: function () {
       Object.defineProperty(this, "currentSong", {
@@ -397,7 +378,8 @@ const app = (function () {
         return (
           accumulator +
           `
-            <div data-index="${index}" class="song ${app.currentIndex === index ? "active" : ""
+            <div data-index="${index}" class="song ${
+            app.currentIndex === index ? "active" : ""
           } " >
         <span></span>
           <div
@@ -424,16 +406,15 @@ const app = (function () {
       this.renderlabel();
     },
     renderlabel() {
-      const titleSongs = $$('.song .title');
+      const titleSongs = $$(".song .title");
       for (let i in this.songs) {
         if (this.songs[i].new === true) {
-          titleSongs[i].classList.add('new');
+          titleSongs[i].classList.add("new");
         }
         if (this.songs[i].hot === true) {
-          titleSongs[i].classList.add('hot');
+          titleSongs[i].classList.add("hot");
         }
       }
-
     },
     songActive: function () {
       const currentSongActive = $(".song.active");
@@ -514,9 +495,12 @@ const app = (function () {
       const cdWidth = cd.offsetWidth;
       const brWidth = backgroundLight.offsetWidth;
       document.onscroll = function () {
-        const scrollRange = window.scrollY || document.documentElement.scrollTop;
-        const cdNewWidth = cdWidth - scrollRange <= 0 ? 0 : cdWidth - scrollRange;
-        const brNewWidth = brWidth - scrollRange <= 0 ? 0 : brWidth - scrollRange;
+        const scrollRange =
+          window.scrollY || document.documentElement.scrollTop;
+        const cdNewWidth =
+          cdWidth - scrollRange <= 0 ? 0 : cdWidth - scrollRange;
+        const brNewWidth =
+          brWidth - scrollRange <= 0 ? 0 : brWidth - scrollRange;
         const opacityCd = cdNewWidth / cdWidth;
         const opacityBr = brNewWidth / brWidth;
         cd.style.width = cdNewWidth + "px";
@@ -528,7 +512,7 @@ const app = (function () {
 
       //Click play button handle events
       playBtn.onclick = function (e) {
-        const playingIcon = $('.active .playing-icon');
+        const playingIcon = $(".active .playing-icon");
         player.classList.toggle("playing");
         if (player.classList.contains("playing")) {
           audio.play();
@@ -573,7 +557,9 @@ const app = (function () {
 
       //on seek progress bar
       progressBar.oninput = function (e) {
-        const seekTime = Math.floor((progressBar.value / 1000) * audio.duration);
+        const seekTime = Math.floor(
+          (progressBar.value / 1000) * audio.duration
+        );
         audio.currentTime = seekTime;
       };
 
@@ -636,7 +622,6 @@ const app = (function () {
       let CMProBarCrrTime = 0;
       let CMCurrIndex = 0;
 
-
       // save data when switch mode
       chillBtn.onmousedown = function () {
         if (chillBtn.classList.contains("on-mode")) {
@@ -662,9 +647,8 @@ const app = (function () {
           app.songActive();
           if (player.classList.contains("playing")) {
             audio.pause();
-            player.classList.remove('playing');
+            player.classList.remove("playing");
             cdAnimate.pause();
-
           }
           app.isChillMode = true;
         } else {
@@ -679,7 +663,7 @@ const app = (function () {
           app.songActive();
           if (player.classList.contains("playing")) {
             audio.pause();
-            player.classList.remove('playing');
+            player.classList.remove("playing");
             cdAnimate.pause();
           }
           app.isChillMode = false;
@@ -692,8 +676,8 @@ const app = (function () {
         app.renderSongs();
         app.loadCurrentSong();
         app.songActive();
-        const playingIcon = $('.active .playing-icon');
-        playingIcon.style.display = 'none';
+        const playingIcon = $(".active .playing-icon");
+        playingIcon.style.display = "none";
         if (player.classList.contains("playing")) {
           audio.play();
         }
@@ -704,8 +688,8 @@ const app = (function () {
         app.renderSongs();
         app.loadCurrentSong();
         app.songActive();
-        const playingIcon = $('.active .playing-icon');
-        playingIcon.style.display = 'none';
+        const playingIcon = $(".active .playing-icon");
+        playingIcon.style.display = "none";
         if (player.classList.contains("playing")) {
           audio.play();
         }
@@ -725,7 +709,6 @@ const app = (function () {
       };
       chillBtn.addEventListener("click", handelChillMode);
 
-
       // volume control
       audio.volume = 0.7;
       progressVolume.value = audio.volume * 100;
@@ -736,34 +719,32 @@ const app = (function () {
         audio.volume = progressVolume.value / 100;
         currentAudio = audio.volume;
         if (audio.volume === 0) {
-          volumeBtn.classList.add('VolumeControl--sound-off');
+          volumeBtn.classList.add("VolumeControl--sound-off");
         } else {
-          if (volumeBtn.classList.contains('VolumeControl--sound-off')) {
-            volumeBtn.classList.remove('VolumeControl--sound-off');
+          if (volumeBtn.classList.contains("VolumeControl--sound-off")) {
+            volumeBtn.classList.remove("VolumeControl--sound-off");
           }
         }
-      }
+      };
 
       progressVolume.onclick = function (e) {
         e.stopPropagation();
-      }
+      };
 
       volumeWrapper.onclick = function (e) {
         e.stopPropagation();
-      }
+      };
 
       volumeBtn.onclick = function (e) {
-        volumeBtn.classList.toggle('VolumeControl--sound-off');
-        if (volumeBtn.classList.contains('VolumeControl--sound-off')) {
+        volumeBtn.classList.toggle("VolumeControl--sound-off");
+        if (volumeBtn.classList.contains("VolumeControl--sound-off")) {
           audio.volume = 0;
           progressVolume.value = audio.volume * 100;
         } else {
           audio.volume = currentAudio;
           progressVolume.value = audio.volume * 100;
         }
-      }
-
-
+      };
     },
 
     loadCurrentSong: function () {
@@ -776,7 +757,11 @@ const app = (function () {
       this.isRandom = this.config.isRandom;
       this.isRepeat = this.config.isRepeat;
       this.isChillMode = this.config.isChillMode;
-      if (this.config.currentIndex != undefined && this.config.currentProgressBar != undefined && this.config.currentTime != undefined) {
+      if (
+        this.config.currentIndex != undefined &&
+        this.config.currentProgressBar != undefined &&
+        this.config.currentTime != undefined
+      ) {
         this.currentIndex = this.config.currentIndex;
         audio.currentTime = this.config.currentTime;
         progressBar.value = this.config.currentProgressBar;
@@ -829,7 +814,7 @@ const app = (function () {
       this.handleEvents();
       this.notification();
     },
-  }
+  };
 })();
 
 app.main();
